@@ -43,9 +43,9 @@ public class RootView extends RelativeLayout {
     @Override
     public boolean dispatchTouchEvent(MotionEvent ev) {
         if (ev.getAction() == MotionEvent.ACTION_DOWN) {
-            // Log.i(TAG, Static.dispatchTouchEvent + "呼叫技术部,老板要做淘宝,下周上线.");
+            Log.i(TAG, Static.dispatchTouchEvent + "呼叫技术部,老板要做淘宝,下周上线.");
             //Log.i(TAG, Static.dispatchTouchEvent + "技术部,老板说按钮不好看,要加一道光.");
-            Log.i(TAG, Static.dispatchTouchEvent + "技术部,你们的app快做完了么?");
+//            Log.i(TAG, Static.dispatchTouchEvent + "技术部,你们的app快做完了么?");
         }
         return super.dispatchTouchEvent(ev);
     }
@@ -54,17 +54,19 @@ public class RootView extends RelativeLayout {
     public boolean onInterceptTouchEvent(MotionEvent ev) {
         if (ev.getAction() == MotionEvent.ACTION_DOWN) {
             //Log.i(TAG, Static.onInterceptTouchEvent + "(老板可能疯了,但又不是我做.)");
-            Log.i(TAG, Static.onInterceptTouchEvent );
+            Log.i(TAG, Static.onInterceptTouchEvent);
         }
-        return super.onInterceptTouchEvent(ev);
+        return super.onInterceptTouchEvent(ev);//默认不拦截事件，分发给子View的dispatchTouchEvent
+//        return true;//拦截事件
     }
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
         if (event.getAction() == MotionEvent.ACTION_DOWN) {
-            //Log.i(TAG, Static.onTouchEvent+"报告老板, 技术部说做不了");
-            Log.i(TAG, Static.onTouchEvent );
+            Log.i(TAG, Static.onTouchEvent + "报告老板, 技术部说做不了");
+//            Log.i(TAG, Static.onTouchEvent);
         }
-        return super.onTouchEvent(event);
+        return super.onTouchEvent(event);//默认是不消费事件的
+//        return true;//消费事件
     }
 }

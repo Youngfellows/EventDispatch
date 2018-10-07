@@ -43,9 +43,9 @@ public class ViewGroupA extends RelativeLayout {
     @Override
     public boolean dispatchTouchEvent(MotionEvent ev) {
         if (ev.getAction() == MotionEvent.ACTION_DOWN) {
-            //Log.i(TAG, Static.dispatchTouchEvent + "老板要做淘宝,下周上线?");
+            Log.i(TAG, Static.dispatchTouchEvent + "老板要做淘宝,下周上线?");
             //Log.i(TAG, Static.dispatchTouchEvent + "给按钮加上一道光.");
-            Log.i(TAG, Static.dispatchTouchEvent + "项目进度?");
+//            Log.i(TAG, Static.dispatchTouchEvent + "项目进度?");
         }
 
         return super.dispatchTouchEvent(ev);
@@ -58,17 +58,19 @@ public class ViewGroupA extends RelativeLayout {
             Log.i(TAG, Static.onInterceptTouchEvent);
         }
 
-        // return super.onInterceptTouchEvent(ev);
-        return true;
+//        return super.onInterceptTouchEvent(ev);
+        return false;//默认是不拦截事件的，调用子View的dispatchTouchEvent将事件分发下去
+//        return true;//拦截事件，调用自己的onTouchEvent，判断自己是否消费事件
     }
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
         if (event.getAction() == MotionEvent.ACTION_DOWN) {
-            //Log.i(TAG, Static.onTouchEvent + "小王说做不了");
+            Log.i(TAG, Static.onTouchEvent + "小王说做不了");
             //Log.i(TAG, Static.onTouchEvent);
-            Log.i(TAG, Static.onTouchEvent+"正在测试,明天就测试完了");
+//            Log.i(TAG, Static.onTouchEvent + "正在测试,明天就测试完了");
         }
-        return true;
+        return false;//不消费事件,传给父View，如果父View不消费,再传给父View的父View
+//        return true;//消费掉事件,事件传递完成了
     }
 }
