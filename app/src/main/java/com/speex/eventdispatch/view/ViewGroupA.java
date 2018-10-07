@@ -43,8 +43,8 @@ public class ViewGroupA extends RelativeLayout {
     @Override
     public boolean dispatchTouchEvent(MotionEvent ev) {
         if (ev.getAction() == MotionEvent.ACTION_DOWN) {
-            Log.i(TAG, Static.dispatchTouchEvent + "老板要做淘宝,下周上线?");
-            //Log.i(TAG, Static.dispatchTouchEvent + "给按钮加上一道光.");
+//            Log.i(TAG, Static.dispatchTouchEvent + "老板要做淘宝,下周上线?");
+            Log.i(TAG, Static.dispatchTouchEvent + "给按钮加上一道光.");
 //            Log.i(TAG, Static.dispatchTouchEvent + "项目进度?");
         }
 
@@ -54,8 +54,8 @@ public class ViewGroupA extends RelativeLayout {
     @Override
     public boolean onInterceptTouchEvent(MotionEvent ev) {
         if (ev.getAction() == MotionEvent.ACTION_DOWN) {
-            //Log.i(TAG, Static.onInterceptTouchEvent + "(看着不太靠谱,先问问小王怎么看)");
-            Log.i(TAG, Static.onInterceptTouchEvent);
+            Log.i(TAG, Static.onInterceptTouchEvent + "(看着不太靠谱,先问问小王怎么看)");
+//            Log.i(TAG, Static.onInterceptTouchEvent);
         }
 
 //        return super.onInterceptTouchEvent(ev);

@@ -20,8 +20,8 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean dispatchTouchEvent(MotionEvent ev) {
         if (ev.getAction() == MotionEvent.ACTION_DOWN) {
-            Log.i(TAG, Static.dispatchTouchEvent + "经理,我准备发展一下电商业务,下周之前做一个淘宝出来.");
-            //Log.i(TAG, Static.dispatchTouchEvent+"把按钮做的好看一点,要有光泽,给人一种点击的欲望.");
+//            Log.i(TAG, Static.dispatchTouchEvent + "经理,我准备发展一下电商业务,下周之前做一个淘宝出来.");
+            Log.i(TAG, Static.dispatchTouchEvent + "把按钮做的好看一点,要有光泽,给人一种点击的欲望.");
 //            Log.i(TAG, Static.dispatchTouchEvent + "现在项目做到什么程度了?");
         }
         return super.dispatchTouchEvent(ev);

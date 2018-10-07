@@ -43,8 +43,8 @@ public class View1 extends View {
     @Override
     public boolean dispatchTouchEvent(MotionEvent event) {
         if (event.getAction() == MotionEvent.ACTION_DOWN) {
-            Log.i(TAG, Static.dispatchTouchEvent + "做淘宝???");
-//            Log.i(TAG, Static.dispatchTouchEvent + "加一道光.");
+//            Log.i(TAG, Static.dispatchTouchEvent + "做淘宝???");
+            Log.i(TAG, Static.dispatchTouchEvent + "加一道光.");
         }
         return super.dispatchTouchEvent(event);
     }
@@ -52,10 +52,10 @@ public class View1 extends View {
     @Override
     public boolean onTouchEvent(MotionEvent event) {
         if (event.getAction() == MotionEvent.ACTION_DOWN) {
-            Log.i(TAG, Static.onTouchEvent + "这个真心做不了啊");
-//            Log.i(TAG, Static.onTouchEvent + "做好了.");
+//            Log.i(TAG, Static.onTouchEvent + "这个真心做不了啊");
+            Log.i(TAG, Static.onTouchEvent + "做好了.");
         }
-//        return true;//自己消费掉事件，事件传递完成了
-        return false;//不消费事件,传给父View，如果父View不消费,再传给父View的父View
+        return true;//自己消费掉事件，事件传递完成了
+//        return false;//不消费事件,传给父View，如果父View不消费,再传给父View的父View
     }
 }
