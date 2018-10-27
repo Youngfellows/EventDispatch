@@ -24,7 +24,9 @@
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:layout_alignParentRight="true"
-        android:background="#BDDA66"/>
+        android:background="#BDDA66"
+        android:clickable="true"
+        android:onClick="showEventAty"/>
 
 
 </com.speex.eventdispatch.view.RootView>

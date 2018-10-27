@@ -1,9 +1,11 @@
 package com.speex.eventdispatch;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.MotionEvent;
+import android.view.View;
 
 import com.speex.eventdispatch.view.Static;
 
@@ -34,5 +36,15 @@ public class MainActivity extends AppCompatActivity {
 //            Log.i(TAG, Static.onTouchEvent);
         }
         return super.onTouchEvent(event);
+    }
+
+    /**
+     * 事件分发测试
+     *
+     * @param view
+     */
+    public void showEventAty(View view) {
+        Intent intent = new Intent(this, TouchEventActivity.class);
+        this.startActivity(intent);
     }
 }

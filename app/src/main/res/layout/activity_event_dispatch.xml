@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.speex.eventdispatch.event.TouchEventFather
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="20dp"
+    android:background="#468AD7"
+    android:gravity="center"
+    tools:context="com.speex.eventdispatch.TouchEventActivity">
+
+    <com.speex.eventdispatch.event.TouchEventChilds
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:background="@color/colorAccent">
+
+    </com.speex.eventdispatch.event.TouchEventChilds>
+
+</com.speex.eventdispatch.event.TouchEventFather>
